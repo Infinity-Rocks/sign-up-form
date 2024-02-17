@@ -31,46 +31,57 @@
                     realize your deepest dreams.
                 </div>
                 <div class="middle-text">
-                    Sign up now to get started.
+                    Sign up <i>now</i> to get started.
                 </div>
                 <div class="lower-text">
-                    You know you want to.
+                    You <i>know</i> you want to.
                 </div>
             </div>
             <div class="form-content">
                 <form action="" method="post">
-                    <h1>Let's do this!</h1>
+                    <h2>Let's do this!</h2>
+                    <div class="top-row">
+                        <div class="form-row">
+                            <label for="first-name">FIRST NAME</label>
+                            <input type="text" name="first-name" id="first-name" required />
+                        </div>
 
-                    <div class="form-row">
-                        <label for="first-name">FIRST NAME</label>
-                        <input type="text" name="first-name" id="first-name" />
-
-                        <label for="last-name">LAST NAME</label>
-                        <input type="text" name="last-name" id="last-name" />
+                        <div class="form-row">
+                            <label for="last-name">LAST NAME</label>
+                            <input type="text" name="last-name" id="last-name" required />
+                        </div>
                     </div>
 
-                    <div class="form-row">
-                        <label for="email">EMAIL</label>
-                        <input type="email" name="email" id="email" />
+                    <div class="middle-row">
+                        <div class="form-row">
+                            <label for="email">EMAIL</label>
+                            <input type="email" name="email" id="email" required />
+                        </div>
 
-                        <label for="phone">PHONE NUMBER</label>
-                        <input type="number" name="phone" id="phone" />
+                        <div class="form-row">
+                            <label for="phone">PHONE NUMBER</label>
+                            <input type="tel" name="phone" id="phone" pattern="[0-9]{10}" required />
+                        </div>
                     </div>
 
-                    <div class="form-row">
-                        <label for="password">PASSWORD</label>
-                        <input type="password" name="password" id="password" />
+                    <div class="bottom-row">
+                        <div class="form-row">
+                            <label for="password">PASSWORD</label>
+                            <input type="password" name="password" id="password" minlength="8" required />
+                        </div>
 
-                        <label for="check-password">CONFIRM PASSWORD</label>
-                        <input type="password" name="password" id="password" />
-                    </div>
-
-                    <div class="submit">
-                        <button type="submit">Create Account</button>
+                        <div class="form-row">
+                            <label for="confirm-password">CONFIRM PASSWORD</label>
+                            <input type="password" name="confirm-password" id="confirm-password" minlength="8"
+                                required />
+                        </div>
                     </div>
                 </form>
             </div>
             <div class="login">
+                <div class="submit">
+                    <button type="submit">Create Account</button>
+                </div>
                 Already have an account? <a href="#">Log in</a>
             </div>
         </div>
