@@ -1,0 +1,65 @@
+body {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.background-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-basis: 420px;
+    flex-shrink: 0;
+    padding: 0;
+    margin: 0;
+    background-image: url("./images/Green\ leaf\ plant\ photo.jpg");
+    /* background-size: 100% 100%; */
+    background-size: cover;
+}
+
+.odin-background {
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+    background-color: rgba(0, 0, 0, .5);
+    color: #fff;
+}
+
+.odin-image img {
+    padding: 10px;
+    height: 120px;
+    width: auto;
+}
+
+.odin-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "norse-bold";
+    padding-top: 30px;
+    font-size: 90px;
+}
+
+footer {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: rgba(223, 221, 213, .8);
+    padding-bottom: 10px;
+}
+
+footer a {
+    color: rgb(249, 249, 245);
+}
+
+@font-face {
+    font-family: 'norse-bold';
+    src: url('./Norse\ Bold.otf');
+}
