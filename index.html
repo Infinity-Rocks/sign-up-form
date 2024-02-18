@@ -38,7 +38,7 @@
                 </div>
             </div>
             <div class="form-content">
-                <form action="" method="post">
+                <form action="" method="post" id="signup-form" autocomplete="off">
                     <h2>Let's do this!</h2>
                     <div class="top-row">
                         <div class="form-row">
@@ -60,27 +60,33 @@
 
                         <div class="form-row">
                             <label for="phone">PHONE NUMBER</label>
-                            <input type="tel" name="phone" id="phone" pattern="[0-9]{10}" required />
+                            <input type="tel" name="phone" id="phone" required />
                         </div>
                     </div>
 
                     <div class="bottom-row">
                         <div class="form-row">
                             <label for="password">PASSWORD</label>
-                            <input type="password" name="password" id="password" minlength="8" required />
+                            <input type="password" name="password" id="password" required />
                         </div>
 
                         <div class="form-row">
                             <label for="confirm-password">CONFIRM PASSWORD</label>
-                            <input type="password" name="confirm-password" id="confirm-password" minlength="8"
-                                required />
+                            <input type="password" name="confirm-password" id="confirm-password" required />
                         </div>
                     </div>
                 </form>
             </div>
+            <div id="message">
+                <h3>Password must contain the following:</h3>
+                <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+                <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+                <p id="number" class="invalid">A <b>number</b></p>
+                <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+            </div>
             <div class="login">
                 <div class="submit">
-                    <button type="submit">Create Account</button>
+                    <button type="submit" form="signup-form">Create Account</button>
                 </div>
                 <div class="login-link">
                     Already have an account? <a href="#">Log in</a>
@@ -88,6 +94,7 @@
             </div>
         </div>
     </div>
+    <script src="./script.js"></script>
 </body>
 
 </html>
