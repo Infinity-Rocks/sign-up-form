@@ -2,6 +2,11 @@ const email = document.getElementById("email");
 const phone = document.getElementById("phone");
 const password = document.getElementById("password");
 const confirmPassword = document.getElementById("confirm-password");
+const passwordElement = document.getElementsByClassName('bottom-row')[0].children[0];
+const loginPassword = document.getElementById("login-password");
+const submitForm = document.getElementById("signup-form");
+const loginForm = document.getElementById("login-form");
+
 
 let emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 let phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
@@ -10,7 +15,6 @@ let upperCaseRegex = /[A-Z]/g;
 let numberRegex = /[0-9]/g;
 
 let passwordMismatch = document.createElement('div');
-const passwordElement = document.getElementsByClassName('bottom-row')[0].children[0];
 
 let letter = document.getElementById("letter");
 let capital = document.getElementById("capital");
@@ -37,11 +41,11 @@ phone.addEventListener("input", (event) => {
 
 password.onfocus = function () {
     document.getElementById("message").style.display = "block";
-}
+};
 
 password.onblur = function () {
     document.getElementById("message").style.display = "none";
-}
+};
 
 password.onkeyup = () => {
     if (password.value.match(lowerCaseRegex)) {
@@ -75,7 +79,7 @@ password.onkeyup = () => {
         length.classList.remove("valid");
         length.classList.add("invalid");
     }
-}
+};
 
 confirmPassword.addEventListener("input", (event) => {
     if (password.value != confirmPassword.value || password.value == "" && confirmPassword.value == "") {
@@ -91,4 +95,10 @@ confirmPassword.addEventListener("input", (event) => {
         password.style.borderColor = "rgb(0, 255, 0)";
         passwordElement.removeChild(passwordMismatch);
     }
+});
+
+submitForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    alert("Form Submitted Successfully!");
+    window.location.replace("login.html");
 });
